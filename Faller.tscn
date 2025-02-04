@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1r508dq8gi3u"]
+
+[ext_resource type="Texture2D" uid="uid://5eun8mm5xbu6" path="res://icon.svg" id="1_ydryi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k1pa5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3uyo8"]
+
+[node name="Icon1" type="RigidBody2D"]
+position = Vector2(309, 94)
+physics_material_override = SubResource("PhysicsMaterial_k1pa5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.36, 6.36)
+shape = SubResource("CircleShape2D_3uyo8")
+debug_color = Color(0.940373, 8.66354e-06, 0.615292, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ydryi")
