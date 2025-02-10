@@ -122,6 +122,7 @@ func update_visuals():
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3a8kh"]
+radius = 2.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dbjwp"]
 friction = 10000.0
@@ -136,8 +137,7 @@ rough = true
 [node name="Rope" type="Node2D" parent="." node_paths=PackedStringArray("start", "end")]
 position = Vector2(191, 110)
 script = SubResource("GDScript_m0kn7")
-segment_count = 8
-segment_length = 10.0
+segment_count = 5
 rope_friction = 100.0
 stiffness = 60
 elasticity = 20.0
@@ -160,6 +160,7 @@ round_precision = 2
 position = Vector2(251, 30)
 collision_layer = 2
 mass = 2.0
+lock_rotation = true
 script = ExtResource("2_wrbbh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rope/End"]
@@ -172,6 +173,8 @@ texture = ExtResource("4_u22ar")
 [node name="Start" type="RigidBody2D" parent="Rope"]
 position = Vector2(251, 30)
 collision_layer = 2
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_fetxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rope/Start"]
